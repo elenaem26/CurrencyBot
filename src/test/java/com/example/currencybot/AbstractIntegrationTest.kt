@@ -1,8 +1,6 @@
 package com.example.currencybot
 
-import org.jooq.DSLContext
 import org.junit.jupiter.api.TestInstance
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.DynamicPropertyRegistry
 import org.springframework.test.context.DynamicPropertySource
@@ -13,7 +11,7 @@ import org.testcontainers.junit.jupiter.Testcontainers
 @Testcontainers
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-abstract class AbstractJooqIntegrationTest {
+abstract class AbstractIntegrationTest {
 
     companion object {
         @Container
@@ -34,7 +32,4 @@ abstract class AbstractJooqIntegrationTest {
             registry.add("spring.datasource.password", postgres::getPassword)
         }
     }
-
-    @Autowired
-    protected lateinit var dsl: DSLContext
 } 

@@ -79,7 +79,7 @@ The bot uses the [Exchange Rate API](https://exchangerate-api.com/) for real-tim
 
 ## Database
 
-The application uses PostgreSQL with JOOQ for type-safe SQL operations. All currency conversions are stored in the database for history and analytics.
+The application uses PostgreSQL with Hibernate/JPA for database operations. All currency conversions are stored in the database for history and analytics.
 
 ## Project Structure
 
@@ -89,6 +89,12 @@ src/main/java/com/example/currencybot/
 │   └── MyTelegramBot.kt          # Main bot implementation
 ├── config/
 │   └── BotConfig.kt              # Bot configuration
+├── entity/
+│   └── CurrencyConversion.kt     # JPA entity
+├── repository/
+│   └── CurrencyConversionRepository.kt  # JPA repository
+├── service/
+│   └── CurrencyConversionService.kt     # Business logic
 └── CurrencyBotApplication.java   # Spring Boot application
 ```
 
