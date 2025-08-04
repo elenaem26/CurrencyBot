@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: CurrencyBot
+  datasource:
+    url: jdbc:postgresql://localhost:5432/currencybot
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+
+telegrambots:
+  enabled: true
+  bots:
+    - username: <name>
+      token: <token>

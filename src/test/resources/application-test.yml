@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: CurrencyBot-Test
+#  sql:
+#    init:
+#      mode: always
+#      schema-locations: classpath:schema.sql
+#      data-locations: classpath:data-test.sql
+
+telegrambots:
+  enabled: false 
